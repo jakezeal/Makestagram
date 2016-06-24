@@ -31,15 +31,7 @@ class TimelineViewController: UIViewController {
         ParseHelper.timelineRequestForCurrentUser { (result: [PFObject]?, error: NSError?) in
             self.posts = result as? [Post] ?? []
             
-            for post in self.posts {
-                do {
-                    let data = try post.imageFile?.getData()
-                    post.image = UIImage(data: data!, scale:1.0)
-                } catch {
-                    // Set default images so user does not get blank timeline ever
-                    print("could not get image")
-                }
-            }
+            
             self.tableView.reloadData()
         }
     }
@@ -55,7 +47,7 @@ class TimelineViewController: UIViewController {
         photoTakingHelper = PhotoTakingHelper(viewController: tabBarController!) { (image: UIImage?) in
             
             let post = Post()
-            post.image = image
+            post.image.value = image!
             post.uploadPost()
             
         }
@@ -85,8 +77,10 @@ extension TimelineViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(IdentifierConstants.postCellIdentifier)! as! PostTableViewCell
         
-        cell.postImageView.image = posts[indexPath.row].image
-        
+        let post = posts[indexPath.row]
+        post.downloadImage()
+        cell.post = post
+                
         return cell
     }
 }
