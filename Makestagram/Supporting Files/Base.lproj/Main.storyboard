@@ -38,12 +38,41 @@
                     <view key="view" contentMode="scaleToFill" id="Mmz-tk-8Ta">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="krK-on-7ev">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostCell" id="Eb8-HN-ham">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eb8-HN-ham" id="2uh-Go-hpi">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hjF-VN-ZJE" id="Shf-Kc-d5q"/>
+                                    <outlet property="delegate" destination="hjF-VN-ZJE" id="4GW-97-47t"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="krK-on-7ev" secondAttribute="trailing" id="L5w-Xp-7Pc"/>
+                            <constraint firstItem="X3p-Ee-TIu" firstAttribute="top" secondItem="krK-on-7ev" secondAttribute="bottom" id="ZH5-JY-aug"/>
+                            <constraint firstItem="krK-on-7ev" firstAttribute="top" secondItem="mYM-04-KK2" secondAttribute="bottom" id="gZy-P1-Q09"/>
+                            <constraint firstItem="krK-on-7ev" firstAttribute="leading" secondItem="Mmz-tk-8Ta" secondAttribute="leading" id="lPy-KK-6ac"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="home" id="sux-dk-GU9">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="krK-on-7ev" id="gg8-d4-q5i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yPJ-Z0-3TJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
