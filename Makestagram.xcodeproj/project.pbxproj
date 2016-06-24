@@ -40,6 +40,7 @@
 		E2E1540F1D1D98740094BFCE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E1540A1D1D98740094BFCE /* Images.xcassets */; };
 		E2E154141D1D9CA10094BFCE /* PhotoTakingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E154131D1D9CA10094BFCE /* PhotoTakingHelper.swift */; };
 		E2E154171D1DAA2C0094BFCE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2E154161D1DAA2C0094BFCE /* Info.plist */; };
+		E2E1541A1D1DB67E0094BFCE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E154191D1DB67E0094BFCE /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		E2E154131D1D9CA10094BFCE /* PhotoTakingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoTakingHelper.swift; path = PhotoTaking/PhotoTakingHelper.swift; sourceTree = "<group>"; };
 		E2E154151D1DA9DB0094BFCE /* Makestagram-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Makestagram-Bridging-Header.h"; sourceTree = "<group>"; };
 		E2E154161D1DAA2C0094BFCE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2E154191D1DB67E0094BFCE /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = DataModel/Post.swift; sourceTree = "<group>"; };
 		E90EF6307DCCDD1C8928B547 /* Pods-Makestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.release.xcconfig"; sourceTree = "<group>"; };
 		FF256A4E587B0B3A692AEB12 /* Pods-MakestagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakestagramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MakestagramTests/Pods-MakestagramTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,8 +208,9 @@
 				E2368B7E1D1CFB53003B0638 /* PhotoTaking */,
 				E2368B7D1D1CABD9003B0638 /* Friend Search */,
 				627718821B0A581600AF5C6E /* Filter View Controller */,
-				E2368B721D1CA363003B0638 /* DataManager */,
 				6277189C1B0A58E800AF5C6E /* Helpers */,
+				E2E154181D1DB61B0094BFCE /* DataModel */,
+				E2368B721D1CA363003B0638 /* DataManager */,
 				E2E154081D1D98740094BFCE /* Main.storyboard */,
 				62C8C1E31B06BD6500DC3EA7 /* Supporting Files */,
 			);
@@ -297,6 +300,14 @@
 			name = FilterPreviewImages;
 			path = Makestagram/FilterViewController/FilterPreviewImages;
 			sourceTree = SOURCE_ROOT;
+		};
+		E2E154181D1DB61B0094BFCE /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				E2E154191D1DB67E0094BFCE /* Post.swift */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -511,6 +522,7 @@
 				E2E154041D1D98480094BFCE /* DataManager.swift in Sources */,
 				627718A01B0A58E800AF5C6E /* ParseLoginHelper.swift in Sources */,
 				E2E154141D1D9CA10094BFCE /* PhotoTakingHelper.swift in Sources */,
+				E2E1541A1D1DB67E0094BFCE /* Post.swift in Sources */,
 				E2368B711D1CA15E003B0638 /* ParseLoginHelper+Delegate.swift in Sources */,
 				E2E153EF1D1D98290094BFCE /* FriendSearchViewController.swift in Sources */,
 				E2E153ED1D1D981B0094BFCE /* PhotoViewController.swift in Sources */,

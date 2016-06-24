@@ -35,14 +35,14 @@ class PhotoTakingHelper: NSObject {
         alertController.addAction(cancelAction)
         
         let photoLibraryAction = UIAlertAction(title: "Photo from Library", style: .Default) { (action) in
-            // do nothing yet...
+            self.showImagePickerController(.PhotoLibrary)
         }
         alertController.addAction(photoLibraryAction)
         
         // Only show camera option if rear camera is available
         if (UIImagePickerController.isCameraDeviceAvailable(.Rear)) {
             let cameraAction = UIAlertAction(title: "Photo from Camera", style: .Default) { (action) in
-                // do nothing yet...
+                self.showImagePickerController(.Camera)
             }
             
             alertController.addAction(cameraAction)
@@ -51,4 +51,24 @@ class PhotoTakingHelper: NSObject {
         viewController.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    func showImagePickerController(sourceType: UIImagePickerControllerSourceType) {
+        imagePickerController = UIImagePickerController()
+        imagePickerController!.sourceType = sourceType
+        imagePickerController!.delegate = self
+        
+        viewController.presentViewController(imagePickerController!, animated: true, completion: nil)
+    }
 }
+
+// MARK: - Extensions
+extension PhotoTakingHelper: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        callback(image)
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        viewController.dismissViewControllerAnimated(true, completion: nil)
+    }
+}
+
