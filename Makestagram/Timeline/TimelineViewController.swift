@@ -10,6 +10,10 @@ import UIKit
 
 class TimelineViewController: UIViewController {
     
+    // MARK: - Properties
+    var photoTakingHelper: PhotoTakingHelper?
+    
+    
     // MARK: - View Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +25,14 @@ class TimelineViewController: UIViewController {
     func prepareTabBarController() {
         tabBarController?.delegate = self
     }
+    
+    // MARK: - Helpers
+    func takePhoto() {
+        // instantiate photo taking class, provide callback for when photo is selected
+        photoTakingHelper = PhotoTakingHelper(viewController: tabBarController!) { (image: UIImage?) in
+            //
+        }
+    }
 }
 
 // MARK: - Tab Bar Controller Delegate
@@ -28,7 +40,7 @@ extension TimelineViewController: UITabBarControllerDelegate {
     
     func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
         if (viewController is PhotoViewController) {
-            print("Take Photo")
+            takePhoto()
             return false
         } else {
             return true
