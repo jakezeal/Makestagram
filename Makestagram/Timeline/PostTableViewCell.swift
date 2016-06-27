@@ -20,17 +20,20 @@ class PostTableViewCell: UITableViewCell {
         }
     }
     
+    // MARK: - IBOutlets
     @IBOutlet weak var postImageView: UIImageView!
+    @IBOutlet weak var likesIconImageView: UIImageView!
+    @IBOutlet weak var likesLabel: UILabel!
+    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var moreButton: UIButton!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    // MARK: - IBActions
+    @IBAction func likeButtonTapped(sender: AnyObject) {
+        
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    @IBAction func moreButtonTapped(sender: AnyObject) {
         
-        // Configure the view for the selected state
     }
     
 }

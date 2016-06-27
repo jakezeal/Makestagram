@@ -31,7 +31,6 @@ class TimelineViewController: UIViewController {
         ParseHelper.timelineRequestForCurrentUser { (result: [PFObject]?, error: NSError?) in
             self.posts = result as? [Post] ?? []
             
-            
             self.tableView.reloadData()
         }
     }
@@ -51,7 +50,7 @@ class TimelineViewController: UIViewController {
             post.uploadPost()
             
         }
-    }
+    }    
 }
 
 // MARK: - Tab Bar Controller Delegate
@@ -80,7 +79,7 @@ extension TimelineViewController: UITableViewDataSource {
         let post = posts[indexPath.row]
         post.downloadImage()
         cell.post = post
-                
+        
         return cell
     }
 }

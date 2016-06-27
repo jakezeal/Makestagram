@@ -14,6 +14,7 @@ class Post: PFObject, PFSubclassing {
     
     // MARK: - Properties
     var image: Observable<UIImage?> = Observable(nil)
+    var likes: Observable<[PFUser]?> = Observable(nil)
     var photoUploadTask: UIBackgroundTaskIdentifier?
     
     @NSManaged var imageFile: PFFile?
@@ -61,7 +62,7 @@ class Post: PFObject, PFSubclassing {
     func downloadImage() {
         if (image.value == nil) {
             
-            imageFile?.getDataInBackgroundWithBlock { (data: NSData?, error: NSError?) -> Void in
+            imageFile?.getDataInBackgroundWithBlock { (data: NSData?, error: NSError?) in
                 if let data = data {
                     let image = UIImage(data: data, scale:1.0)!
           
@@ -69,6 +70,26 @@ class Post: PFObject, PFSubclassing {
                 }
             }
         }
+    }
+    
+    func fetchLikes() {
+        
+        if (likes.value != nil) {
+            return
+        }
+        
+        ParseHelper.likesForPost(self, completionBlock: { (likes, error) in
+        
+            let validLikes = likes?.filter { like in like[ParseHelperConstants.LikeFromUser] != nil }
+            
+            // map replaces the objects
+            self.likes.value = validLikes?.map { like in
+                
+                let fromUser = like[ParseHelperConstants.LikeFromUser] as! PFUser
+                
+                return fromUser
+            }
+        })
     }
     
 }
