@@ -39,7 +39,6 @@
 		E2E1540E1D1D98740094BFCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2E154081D1D98740094BFCE /* Main.storyboard */; };
 		E2E1540F1D1D98740094BFCE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E1540A1D1D98740094BFCE /* Images.xcassets */; };
 		E2E154141D1D9CA10094BFCE /* PhotoTakingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E154131D1D9CA10094BFCE /* PhotoTakingHelper.swift */; };
-		E2E154171D1DAA2C0094BFCE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2E154161D1DAA2C0094BFCE /* Info.plist */; };
 		E2E1541A1D1DB67E0094BFCE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E154191D1DB67E0094BFCE /* Post.swift */; };
 		E2E1541D1D1DE3C10094BFCE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1541C1D1DE3C10094BFCE /* Constants.swift */; };
 		E2E1541F1D1DE6DB0094BFCE /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1541E1D1DE6DB0094BFCE /* PostTableViewCell.swift */; };
@@ -380,7 +379,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Make School";
 				TargetAttributes = {
 					62C8C1DF1B06BD6500DC3EA7 = {
@@ -424,7 +423,6 @@
 				E2E153FE1D1D983E0094BFCE /* filter_sepia.png in Resources */,
 				E2E153FC1D1D983E0094BFCE /* FilterCollectionViewCell.xib in Resources */,
 				E2E1540F1D1D98740094BFCE /* Images.xcassets in Resources */,
-				E2E154171D1DAA2C0094BFCE /* Info.plist in Resources */,
 				E2E154021D1D983E0094BFCE /* FilterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

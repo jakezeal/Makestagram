@@ -13,12 +13,12 @@ import Bond
 class Post: PFObject, PFSubclassing {
     
     // MARK: - Properties
+    @NSManaged var imageFile: PFFile?
+    @NSManaged var user: PFUser?
+    
     var image: Observable<UIImage?> = Observable(nil)
     var likes: Observable<[PFUser]?> = Observable(nil)
     var photoUploadTask: UIBackgroundTaskIdentifier?
-    
-    @NSManaged var imageFile: PFFile?
-    @NSManaged var user: PFUser?
     
     // MARK: - Initializers
     override init() {
@@ -38,7 +38,7 @@ class Post: PFObject, PFSubclassing {
         return "Post"
     }
     
-    // MARK: - Helper Methods
+    // MARK: - Post Helper Methods
     func uploadPost() {
         
         if let image = image.value {
@@ -59,6 +59,7 @@ class Post: PFObject, PFSubclassing {
         }
     }
     
+    // MARK: - Image Helper Methods
     func downloadImage() {
         if (image.value == nil) {
             
@@ -72,6 +73,7 @@ class Post: PFObject, PFSubclassing {
         }
     }
     
+    // MARK: - Like Helper Methods
     func fetchLikes() {
         
         if (likes.value != nil) {
@@ -90,6 +92,26 @@ class Post: PFObject, PFSubclassing {
                 return fromUser
             }
         })
+    }
+    
+    func doesUserLikePost(user: PFUser) -> Bool {
+        if let likes = likes.value {
+            return likes.contains(user)
+        } else {
+            return false
+        }
+    }
+    
+    func toggleLikePost(user: PFUser) {
+        if (doesUserLikePost(user)) {
+            // if post is liked, unlike it now
+            likes.value = likes.value?.filter { $0 != user }
+            ParseHelper.unlikePost(user, post: self)
+        } else {
+            // if this post is not liked yet, like it now
+            likes.value?.append(user)
+            ParseHelper.likePost(user, post: self)
+        }
     }
     
 }

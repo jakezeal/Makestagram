@@ -35,5 +35,5 @@ struct ParseHelperConstants {
 
 // MARK:- Identifier Constants
 struct IdentifierConstants {
-    static let postCellIdentifier = "PostCell"
+    static let PostCellIdentifier = "PostCell"
 }

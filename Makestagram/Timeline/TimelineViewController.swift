@@ -74,10 +74,11 @@ extension TimelineViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(IdentifierConstants.postCellIdentifier)! as! PostTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(IdentifierConstants.PostCellIdentifier)! as! PostTableViewCell
         
         let post = posts[indexPath.row]
         post.downloadImage()
+        post.fetchLikes()
         cell.post = post
         
         return cell
