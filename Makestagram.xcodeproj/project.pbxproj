@@ -15,13 +15,21 @@
 		62551B9E1B06C354000913E4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62551B9D1B06C354000913E4 /* MobileCoreServices.framework */; };
 		62551BA01B06C35B000913E4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62551B9F1B06C35B000913E4 /* AudioToolbox.framework */; };
 		62551BA21B06C373000913E4 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 62551BA11B06C373000913E4 /* libsqlite3.dylib */; };
-		6277189F1B0A58E800AF5C6E /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6277189D1B0A58E800AF5C6E /* ErrorHandling.swift */; };
 		627718A01B0A58E800AF5C6E /* ParseLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6277189E1B0A58E800AF5C6E /* ParseLoginHelper.swift */; };
 		62A07D661B1F79F2001F6916 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A07D651B1F79F2001F6916 /* libstdc++.6.dylib */; };
 		62C8C1E61B06BD6500DC3EA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C8C1E51B06BD6500DC3EA7 /* AppDelegate.swift */; };
 		62C8C1FC1B06BD6500DC3EA7 /* MakestagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C8C1FB1B06BD6500DC3EA7 /* MakestagramTests.swift */; };
 		D0B2E07877D88AB69EF01B0A /* Pods_MakestagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703CF3C59792EB368E60A0BA /* Pods_MakestagramTests.framework */; };
 		E2368B711D1CA15E003B0638 /* ParseLoginHelper+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2368B701D1CA15E003B0638 /* ParseLoginHelper+Delegate.swift */; };
+		E25F2D2C1D2202C8009D9240 /* FriendSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25F2D2B1D2202C8009D9240 /* FriendSearchTableViewCell.swift */; };
+		E2B495001D259A8400C6A348 /* CustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B494FE1D259A8400C6A348 /* CustomAnimation.swift */; };
+		E2B495011D259A8400C6A348 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B494FF1D259A8400C6A348 /* UIView+Extensions.swift */; };
+		E2B495071D259A9200C6A348 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B495021D259A9200C6A348 /* ForgotPasswordViewController.swift */; };
+		E2B495081D259A9200C6A348 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B495031D259A9200C6A348 /* LoginViewController.swift */; };
+		E2B495091D259A9200C6A348 /* SignupLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2B495041D259A9200C6A348 /* SignupLogin.storyboard */; };
+		E2B4950A1D259A9200C6A348 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B495051D259A9200C6A348 /* SignupViewController.swift */; };
+		E2B4950B1D259A9200C6A348 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B495061D259A9200C6A348 /* WelcomeViewController.swift */; };
+		E2B4950D1D26D7FF00C6A348 /* PostSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4950C1D26D7FF00C6A348 /* PostSectionHeaderView.swift */; };
 		E2E153EB1D1D980D0094BFCE /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E153EA1D1D980D0094BFCE /* TimelineViewController.swift */; };
 		E2E153ED1D1D981B0094BFCE /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E153EC1D1D981B0094BFCE /* PhotoViewController.swift */; };
 		E2E153EF1D1D98290094BFCE /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E153EE1D1D98290094BFCE /* FriendSearchViewController.swift */; };
@@ -34,7 +42,6 @@
 		E2E154001D1D983E0094BFCE /* filter_vignette.png in Resources */ = {isa = PBXBuildFile; fileRef = E2E153F71D1D983E0094BFCE /* filter_vignette.png */; };
 		E2E154011D1D983E0094BFCE /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E153F81D1D983E0094BFCE /* FilterViewController.swift */; };
 		E2E154021D1D983E0094BFCE /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2E153F91D1D983E0094BFCE /* FilterViewController.xib */; };
-		E2E154041D1D98480094BFCE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E154031D1D98480094BFCE /* DataManager.swift */; };
 		E2E1540D1D1D98740094BFCE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2E154061D1D98740094BFCE /* LaunchScreen.xib */; };
 		E2E1540E1D1D98740094BFCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2E154081D1D98740094BFCE /* Main.storyboard */; };
 		E2E1540F1D1D98740094BFCE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E1540A1D1D98740094BFCE /* Images.xcassets */; };
@@ -77,7 +84,6 @@
 		62551B9D1B06C354000913E4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		62551B9F1B06C35B000913E4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		62551BA11B06C373000913E4 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		6277189D1B0A58E800AF5C6E /* ErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
 		6277189E1B0A58E800AF5C6E /* ParseLoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseLoginHelper.swift; sourceTree = "<group>"; };
 		62A07D651B1F79F2001F6916 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		62C8C1E01B06BD6500DC3EA7 /* Makestagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Makestagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +95,15 @@
 		834FCE58AF54F93929465659 /* Pods-MakestagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakestagramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MakestagramTests/Pods-MakestagramTests.debug.xcconfig"; sourceTree = "<group>"; };
 		837E8DB1140E3C18464FF6A5 /* Pods_Makestagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Makestagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2368B701D1CA15E003B0638 /* ParseLoginHelper+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ParseLoginHelper+Delegate.swift"; sourceTree = "<group>"; };
+		E25F2D2B1D2202C8009D9240 /* FriendSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendSearchTableViewCell.swift; path = "Friend Search/FriendSearchTableViewCell.swift"; sourceTree = "<group>"; };
+		E2B494FE1D259A8400C6A348 /* CustomAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomAnimation.swift; path = Extensions/CustomAnimation.swift; sourceTree = "<group>"; };
+		E2B494FF1D259A8400C6A348 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extensions.swift"; path = "Extensions/UIView+Extensions.swift"; sourceTree = "<group>"; };
+		E2B495021D259A9200C6A348 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForgotPasswordViewController.swift; path = Authentication/ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		E2B495031D259A9200C6A348 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Authentication/LoginViewController.swift; sourceTree = "<group>"; };
+		E2B495041D259A9200C6A348 /* SignupLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SignupLogin.storyboard; path = Authentication/SignupLogin.storyboard; sourceTree = "<group>"; };
+		E2B495051D259A9200C6A348 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupViewController.swift; path = Authentication/SignupViewController.swift; sourceTree = "<group>"; };
+		E2B495061D259A9200C6A348 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = Authentication/WelcomeViewController.swift; sourceTree = "<group>"; };
+		E2B4950C1D26D7FF00C6A348 /* PostSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostSectionHeaderView.swift; path = Timeline/PostSectionHeaderView.swift; sourceTree = "<group>"; };
 		E2E153EA1D1D980D0094BFCE /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimelineViewController.swift; path = Timeline/TimelineViewController.swift; sourceTree = "<group>"; };
 		E2E153EC1D1D981B0094BFCE /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoViewController.swift; path = PhotoTaking/PhotoViewController.swift; sourceTree = "<group>"; };
 		E2E153EE1D1D98290094BFCE /* FriendSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendSearchViewController.swift; path = "Friend Search/FriendSearchViewController.swift"; sourceTree = "<group>"; };
@@ -101,7 +116,6 @@
 		E2E153F71D1D983E0094BFCE /* filter_vignette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filter_vignette.png; sourceTree = "<group>"; };
 		E2E153F81D1D983E0094BFCE /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterViewController.swift; path = Makestagram/FilterViewController/FilterViewController.swift; sourceTree = SOURCE_ROOT; };
 		E2E153F91D1D983E0094BFCE /* FilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilterViewController.xib; path = Makestagram/FilterViewController/FilterViewController.xib; sourceTree = SOURCE_ROOT; };
-		E2E154031D1D98480094BFCE /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = DataManager/DataManager.swift; sourceTree = "<group>"; };
 		E2E154071D1D98740094BFCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		E2E154091D1D98740094BFCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		E2E1540A1D1D98740094BFCE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Supporting Files/Images.xcassets"; sourceTree = "<group>"; };
@@ -178,7 +192,6 @@
 		6277189C1B0A58E800AF5C6E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				6277189D1B0A58E800AF5C6E /* ErrorHandling.swift */,
 				6277189E1B0A58E800AF5C6E /* ParseLoginHelper.swift */,
 				E2368B701D1CA15E003B0638 /* ParseLoginHelper+Delegate.swift */,
 				E2E154201D1DEA590094BFCE /* ParseHelper.swift */,
@@ -210,13 +223,14 @@
 			isa = PBXGroup;
 			children = (
 				62C8C1E51B06BD6500DC3EA7 /* AppDelegate.swift */,
+				E25F2D661D22FF0D009D9240 /* Authentication */,
 				E2368B7B1D1CABC6003B0638 /* Timeline */,
 				E2368B7E1D1CFB53003B0638 /* PhotoTaking */,
 				E2368B7D1D1CABD9003B0638 /* Friend Search */,
 				627718821B0A581600AF5C6E /* Filter View Controller */,
 				6277189C1B0A58E800AF5C6E /* Helpers */,
 				E2E154181D1DB61B0094BFCE /* DataModel */,
-				E2368B721D1CA363003B0638 /* DataManager */,
+				E2B494FD1D259A6B00C6A348 /* Extensions */,
 				E2E1541B1D1DE37B0094BFCE /* Constants */,
 				E2E154081D1D98740094BFCE /* Main.storyboard */,
 				62C8C1E31B06BD6500DC3EA7 /* Supporting Files */,
@@ -263,19 +277,12 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		E2368B721D1CA363003B0638 /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				E2E154031D1D98480094BFCE /* DataManager.swift */,
-			);
-			name = DataManager;
-			sourceTree = "<group>";
-		};
 		E2368B7B1D1CABC6003B0638 /* Timeline */ = {
 			isa = PBXGroup;
 			children = (
 				E2E153EA1D1D980D0094BFCE /* TimelineViewController.swift */,
 				E2E1541E1D1DE6DB0094BFCE /* PostTableViewCell.swift */,
+				E2B4950C1D26D7FF00C6A348 /* PostSectionHeaderView.swift */,
 			);
 			name = Timeline;
 			sourceTree = "<group>";
@@ -284,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				E2E153EE1D1D98290094BFCE /* FriendSearchViewController.swift */,
+				E25F2D2B1D2202C8009D9240 /* FriendSearchTableViewCell.swift */,
 			);
 			name = "Friend Search";
 			sourceTree = "<group>";
@@ -295,6 +303,27 @@
 				E2E154131D1D9CA10094BFCE /* PhotoTakingHelper.swift */,
 			);
 			name = PhotoTaking;
+			sourceTree = "<group>";
+		};
+		E25F2D661D22FF0D009D9240 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				E2B495021D259A9200C6A348 /* ForgotPasswordViewController.swift */,
+				E2B495031D259A9200C6A348 /* LoginViewController.swift */,
+				E2B495041D259A9200C6A348 /* SignupLogin.storyboard */,
+				E2B495051D259A9200C6A348 /* SignupViewController.swift */,
+				E2B495061D259A9200C6A348 /* WelcomeViewController.swift */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		E2B494FD1D259A6B00C6A348 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E2B494FE1D259A8400C6A348 /* CustomAnimation.swift */,
+				E2B494FF1D259A8400C6A348 /* UIView+Extensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		E2E153F31D1D983E0094BFCE /* FilterPreviewImages */ = {
@@ -421,6 +450,7 @@
 				E2E153FF1D1D983E0094BFCE /* filter_vibrant.png in Resources */,
 				E2E1540E1D1D98740094BFCE /* Main.storyboard in Resources */,
 				E2E153FE1D1D983E0094BFCE /* filter_sepia.png in Resources */,
+				E2B495091D259A9200C6A348 /* SignupLogin.storyboard in Resources */,
 				E2E153FC1D1D983E0094BFCE /* FilterCollectionViewCell.xib in Resources */,
 				E2E1540F1D1D98740094BFCE /* Images.xcassets in Resources */,
 				E2E154021D1D983E0094BFCE /* FilterViewController.xib in Resources */,
@@ -535,21 +565,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2E153FB1D1D983E0094BFCE /* FilterCollectionViewCell.swift in Sources */,
-				E2E154041D1D98480094BFCE /* DataManager.swift in Sources */,
 				E2E1541F1D1DE6DB0094BFCE /* PostTableViewCell.swift in Sources */,
 				627718A01B0A58E800AF5C6E /* ParseLoginHelper.swift in Sources */,
 				E2E154141D1D9CA10094BFCE /* PhotoTakingHelper.swift in Sources */,
 				E2E1541A1D1DB67E0094BFCE /* Post.swift in Sources */,
 				E2368B711D1CA15E003B0638 /* ParseLoginHelper+Delegate.swift in Sources */,
 				E2E154211D1DEA590094BFCE /* ParseHelper.swift in Sources */,
+				E2B495071D259A9200C6A348 /* ForgotPasswordViewController.swift in Sources */,
+				E2B495081D259A9200C6A348 /* LoginViewController.swift in Sources */,
+				E2B495001D259A8400C6A348 /* CustomAnimation.swift in Sources */,
 				E2E153EF1D1D98290094BFCE /* FriendSearchViewController.swift in Sources */,
+				E2B495011D259A8400C6A348 /* UIView+Extensions.swift in Sources */,
 				E2E153ED1D1D981B0094BFCE /* PhotoViewController.swift in Sources */,
+				E2B4950B1D259A9200C6A348 /* WelcomeViewController.swift in Sources */,
 				E2E154011D1D983E0094BFCE /* FilterViewController.swift in Sources */,
 				E2E153EB1D1D980D0094BFCE /* TimelineViewController.swift in Sources */,
-				6277189F1B0A58E800AF5C6E /* ErrorHandling.swift in Sources */,
+				E2B4950A1D259A9200C6A348 /* SignupViewController.swift in Sources */,
+				E2B4950D1D26D7FF00C6A348 /* PostSectionHeaderView.swift in Sources */,
 				E2E1541D1D1DE3C10094BFCE /* Constants.swift in Sources */,
 				62C8C1E61B06BD6500DC3EA7 /* AppDelegate.swift in Sources */,
 				E2E153FA1D1D983E0094BFCE /* Filter.swift in Sources */,
+				E25F2D2C1D2202C8009D9240 /* FriendSearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

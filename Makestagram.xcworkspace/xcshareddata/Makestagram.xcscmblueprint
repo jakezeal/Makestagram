@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8B759CE7EB16D8C7A7F0218A91FDF7D0CBFA0E96",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8B759CE7EB16D8C7A7F0218A91FDF7D0CBFA0E96" : 0,
+    "CD0951AAE4C1E22768C3AAE2A5DA971F4F8003E2" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "85F98C6C-622D-4B33-B8D1-929417CAA0BB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8B759CE7EB16D8C7A7F0218A91FDF7D0CBFA0E96" : "Makestagram\/",
+    "CD0951AAE4C1E22768C3AAE2A5DA971F4F8003E2" : "..\/..\/97%20Education\/99%20Lighthouse%20Labs\/07%20Projects\/SchedulingApp%20copy"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Makestagram",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Makestagram.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:jakezeal\/Makestagram.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8B759CE7EB16D8C7A7F0218A91FDF7D0CBFA0E96"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jakezeal\/SchedulingApp",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CD0951AAE4C1E22768C3AAE2A5DA971F4F8003E2"
+    }
+  ]
+}

@@ -2,8 +2,8 @@
 //  ParseLoginHelper.swift
 //  Makestagram
 //
-//  Created by Benjamin Encz on 4/15/15.
-//  Copyright (c) 2015 Make School. All rights reserved.
+//  Created by Jake on 6/23/16.
+//  Copyright © 2016 Make School. All rights reserved.
 //
 
 import Foundation
