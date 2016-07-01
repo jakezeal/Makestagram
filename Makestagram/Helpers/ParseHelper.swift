@@ -136,7 +136,7 @@ class ParseHelper {
         query.whereKey(ParseHelperConstants.UserUsername,
                        notEqualTo: PFUser.currentUser()!.username!)
         query.orderByAscending(ParseHelperConstants.UserUsername)
-        query.limit = 20
+        query.limit = 100
         
         query.findObjectsInBackgroundWithBlock(completionBlock)
         

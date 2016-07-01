@@ -15,18 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var welcomeViewController: WelcomeViewController!
     
-    
     var parseLoginHelper: ParseLoginHelper!
     
     var startViewController: UIViewController!
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
         prepareInitialViewController()
+        prepareLoginNotificationObserver()
         prepareWindow()
         prepareParse()
         return true
-        
     }
     
     // MARK: - Preparations
@@ -34,6 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.rootViewController = startViewController
         self.window?.makeKeyAndVisible()
+    }
+    
+    func prepareLoginNotificationObserver() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.login), name: "Login", object: nil)
     }
     
     func prepareInitialViewController() {
@@ -74,6 +76,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let acl = PFACL()
         acl.publicReadAccess = true
         PFACL.setDefaultACL(acl, withAccessForCurrentUser: true)
+    }
+    
+    // MARK: - Helper Methods
+    func login() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        startViewController = storyboard.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
+        
+        window?.rootViewController? = startViewController
+        
     }
 }
 

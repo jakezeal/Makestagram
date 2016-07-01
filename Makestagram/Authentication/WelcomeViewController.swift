@@ -26,7 +26,6 @@ class WelcomeViewController : UIViewController {
         super.viewDidLoad()
         prepareNavigationBar()
         prepareTapGestureRecognizer()
-        prepareImageView()
         prepareImageViewShakeAnimation()
         prepareRotateImageViewAnimation()
 //        prepareButtonShake()
@@ -37,17 +36,13 @@ class WelcomeViewController : UIViewController {
         self.navigationController?.navigationBarHidden = true
     }
     
-    func prepareTapGestureRecognizer() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(WelcomeViewController.shake))
-        tap.numberOfTapsRequired = 1
-        tap.numberOfTouchesRequired = 1
-        imageView.addGestureRecognizer(tap)
-//        loginButton.addGestureRecognizer(tap)
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
     
-    func prepareImageView() {
-        //        imageView.roundCorners()
-        
+    func prepareTapGestureRecognizer() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(WelcomeViewController.shake))
+        imageView.addGestureRecognizer(tap)
     }
     
     func prepareImageViewShakeAnimation() {
@@ -55,12 +50,8 @@ class WelcomeViewController : UIViewController {
     }
     
     func prepareRotateImageViewAnimation() {
-        imageViewRotateAnimation = CustomAnimation(view: imageView, delay: 0, direction: .Left, repetitions: 4, maxRotation: 2, maxPosition: 100, duration: 0.2)
+        imageViewRotateAnimation = CustomAnimation(view: imageView, delay: 0, direction: .Left, repetitions: 4, maxRotation: 6, maxPosition: 100, duration: 0.1)
     }
-    
-//    func prepareButtonShake() {
-//        buttonShake = CustomAnimation(view: loginButton, delay: 0.1, direction: .Right, repetitions: 7, maxRotation: 0.2, maxPosition: 50, duration: 0.2)
-//    }
     
     // MARK:- Actions
     @IBAction func signUpButtonPressed(sender: AnyObject) {
@@ -73,19 +64,14 @@ class WelcomeViewController : UIViewController {
     
     // MARK: - Helper Methods
     func shake() {
-        imageViewRotateAnimation.rotateAnimation()
+        imageViewShakeAnimation.shakeAnimation()
+//        imageViewRotateAnimation.rotateAnimation()
 //        imageViewShakeAnimation.flyIn()
 //        imageViewShakeAnimation.shakeAnimation()
 //        imageViewShakeAnimation.rotate360Degrees()
 //        imageViewShakeAnimation.spinAnimation()
 //        buttonShake.shakeAnimation()
     }
-    
-    // MARK: - Delegate Methods
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
-    
 }
 
 

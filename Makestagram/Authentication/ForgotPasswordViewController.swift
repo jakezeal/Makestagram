@@ -20,6 +20,11 @@ class ForgotPasswordViewController : UIViewController {
         super.viewDidLoad()
     }
     
+    // MARK: - Preparations
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     // MARK: - IBActions
     @IBAction func sendEmailButtonPressed(sender: AnyObject) {
         

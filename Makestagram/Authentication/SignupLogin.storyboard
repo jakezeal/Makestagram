@@ -109,7 +109,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="FIV-Eu-6TV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="fWM-JQ-uAk" id="ldv-0P-o6N"/>
@@ -165,8 +165,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="0zY-SC-vHy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="fWM-JQ-uAk" id="KET-5K-Cov"/>
                                 </connections>
@@ -234,7 +234,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="JQR-EE-Zc5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="MdJ-lo-fUy" id="l1g-4h-7AT"/>

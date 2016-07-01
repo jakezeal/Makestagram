@@ -24,6 +24,8 @@ class CustomAnimation {
     var maxPosition: CGFloat!
     var duration: Double!
     
+    var running = false
+    
     var direction: Direction = .Left
     
     var state: State = .First
@@ -44,7 +46,7 @@ class CustomAnimation {
     // MARK: - Animation Methods
     func rotateAnimation() {
         let factor = CGFloat(self.direction.rawValue * 2 - 1)
-
+        
         let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rotateAnimation.fromValue = 0.0
         
@@ -62,35 +64,44 @@ class CustomAnimation {
     
     
     func shakeAnimation() {
-        UIView.animateWithDuration(self.duration, delay: self.delay, options: .TransitionNone, animations: {
+        
+        guard running else {
+            running = true
             
-            var position = self.maxPosition
-            var rotation = self.maxRotation
-            
-            switch self.state {
-            case .First:
-                position = self.maxPosition / 2
-                break
-            case .Middle:
-                break
-            case .Final:
-                rotation = 0
-                position = self.maxPosition / 2
-                break
+            UIView.animateWithDuration(self.duration, delay: self.delay, options: .TransitionNone, animations: {
+                
+                var position = self.maxPosition
+                var rotation = self.maxRotation
+                
+                switch self.state {
+                case .First:
+                    position = self.maxPosition / 2
+                    break
+                case .Middle:
+                    break
+                case .Final:
+                    rotation = 0
+                    position = self.maxPosition / 2
+                    break
+                }
+                
+                let factor = CGFloat(self.direction.rawValue * 2 - 1)
+                
+                // Position
+                let x = self.view.center.x + position * factor
+                self.view.layer.position.x = x
+                
+                // Rotation
+                self.view.transform = CGAffineTransformMakeRotation(rotation * factor)
+                
+            }) { (completed: Bool) in
+                self.running = false
+                self.finishAnimation()
             }
-            
-            let factor = CGFloat(self.direction.rawValue * 2 - 1)
-            
-            // Position
-            let x = self.view.center.x + position * factor
-            self.view.layer.position.x = x
-            
-            // Rotation
-            self.view.transform = CGAffineTransformMakeRotation(rotation * factor)
-            
-        }) { (completed: Bool) in
-            self.finishAnimation()
+            return
         }
+            
+        
     }
     
     func flyIn() {
@@ -108,30 +119,12 @@ class CustomAnimation {
         //            }
         //        }
         
-    }
+    }   
     
-    //    func spinAnimation() {
-    //        UIView.animateWithDuration(self.duration, animations: {
-    //
-    //            var rotation = self.maxRotation
-    //
-    //            switch self.state {
-    //            case .First:
-    //                break
-    //            case .Middle:
-    //                break
-    //            case .Final:
-    //                rotation = 0
-    //                break
-    //            }
-    //            let factor = CGFloat(self.animationDirection.rawValue * 2 - 1)
-    //            self.view.transform = CGAffineTransformMakeRotation(360)
-    //        }) { (completed: Bool) in
-    //            self.spinAnimation()
-    //        }
-    //    }
-    
-    // MARK: - Helper Methods
+}
+
+private extension CustomAnimation {
+    // MARK: - Private Helper Methods
     func finishAnimation() {
         self.direction = Direction(rawValue: abs(self.direction.rawValue - 1))!
         
@@ -155,5 +148,4 @@ class CustomAnimation {
         }
         
     }
-    
 }
