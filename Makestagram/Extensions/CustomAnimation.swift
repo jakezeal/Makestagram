@@ -3,10 +3,16 @@
 //  Makestagram
 //
 //  Created by Jake on 6/29/16.
-//  Copyright © 2016 Make School. All rights reserved.
+//  Copyright © 2016 Jake Zeal. All rights reserved.
 //
 
 import UIKit
+
+// MARK: - Enumerations
+enum Direction: Int {
+    case Left
+    case Right
+}
 
 enum State {
     case First
@@ -56,7 +62,7 @@ class CustomAnimation {
         // Rotate to the Left
         //        rotateAnimation.toValue = CGFloat(M_PI * 4.0 * Double(factor))
         
-        rotateAnimation.duration = 2
+        rotateAnimation.duration = self.duration
         self.view.layer.addAnimation(rotateAnimation, forKey: nil)
         
         self.maxRotation = self.maxRotation * factor
@@ -65,46 +71,46 @@ class CustomAnimation {
     
     func shakeAnimation() {
         
-        guard running else {
-            running = true
-            
-            UIView.animateWithDuration(self.duration, delay: self.delay, options: .TransitionNone, animations: {
-                
-                var position = self.maxPosition
-                var rotation = self.maxRotation
-                
-                switch self.state {
-                case .First:
-                    position = self.maxPosition / 2
-                    break
-                case .Middle:
-                    break
-                case .Final:
-                    rotation = 0
-                    position = self.maxPosition / 2
-                    break
-                }
-                
-                let factor = CGFloat(self.direction.rawValue * 2 - 1)
-                
-                // Position
-                let x = self.view.center.x + position * factor
-                self.view.layer.position.x = x
-                
-                // Rotation
-                self.view.transform = CGAffineTransformMakeRotation(rotation * factor)
-                
-            }) { (completed: Bool) in
-                self.running = false
-                self.finishAnimation()
-            }
+        guard !running else {
             return
         }
+        
+        running = true
+        
+        let factor = CGFloat(direction.rawValue * 2 - 1)
+        
+        var position = maxPosition
+        var rotation = maxRotation
+        
+        switch self.state {
+        case .First:
+            position = maxPosition / 2
+            break
+        case .Middle:
+            break
+        case .Final:
+            rotation = 0
+            position = maxPosition / 2
+            break
+        }
+        
+        UIView.animateWithDuration(self.duration, delay: self.delay, options: .TransitionNone, animations: {
             
+            // Position
+            let x = self.view.center.x + position * factor
+            self.view.center.x = x
+            
+            // Rotation
+            self.view.transform = CGAffineTransformMakeRotation(rotation * factor)
+            
+        }) { (completed: Bool) in
+            self.running = false
+            self.finishAnimation()
+        }
         
     }
     
-    func flyIn() {
+    func flyFromLeft() {
         
         //        UIView.animateWithDuration(self.duration, delay: self.delay, options: .CurveEaseIn, animations: {
         //
@@ -119,31 +125,31 @@ class CustomAnimation {
         //            }
         //        }
         
-    }   
+    }
     
 }
 
 private extension CustomAnimation {
     // MARK: - Private Helper Methods
     func finishAnimation() {
-        self.direction = Direction(rawValue: abs(self.direction.rawValue - 1))!
+        direction = Direction(rawValue: abs(self.direction.rawValue - 1))!
         
-        if self.counter < self.repetitions {
-            self.state = .Middle
-            self.shakeAnimation()
-            self.counter += 1
+        if counter < self.repetitions {
+            state = .Middle
+            shakeAnimation()
+            counter += 1
             
-        } else if self.counter == self.repetitions {
-            self.state = .Final
-            self.shakeAnimation()
-            self.counter += 1
+        } else if counter == repetitions {
+            state = .Final
+            shakeAnimation()
+            counter += 1
             
         } else {
-            self.state = .First
-            self.counter = 0
+            state = .First
+            counter = 0
             
-            if self.repetitions % 2 == 0 {
-                self.direction = Direction(rawValue: abs(self.direction.rawValue - 1))!
+            if repetitions % 2 == 0 {
+                direction = Direction(rawValue: abs(self.direction.rawValue - 1))!
             }
         }
         

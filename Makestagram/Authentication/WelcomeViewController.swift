@@ -50,7 +50,7 @@ class WelcomeViewController : UIViewController {
     }
     
     func prepareRotateImageViewAnimation() {
-        imageViewRotateAnimation = CustomAnimation(view: imageView, delay: 0, direction: .Left, repetitions: 4, maxRotation: 6, maxPosition: 100, duration: 0.1)
+        imageViewRotateAnimation = CustomAnimation(view: imageView, delay: 0, direction: .Left, repetitions: 4, maxRotation: 4, maxPosition: 0, duration: 1)
     }
     
     // MARK:- Actions
@@ -64,11 +64,10 @@ class WelcomeViewController : UIViewController {
     
     // MARK: - Helper Methods
     func shake() {
-        imageViewShakeAnimation.shakeAnimation()
-//        imageViewRotateAnimation.rotateAnimation()
+//        imageViewShakeAnimation.shakeAnimation()
+        imageViewRotateAnimation.rotateAnimation()
 //        imageViewShakeAnimation.flyIn()
 //        imageViewShakeAnimation.shakeAnimation()
-//        imageViewShakeAnimation.rotate360Degrees()
 //        imageViewShakeAnimation.spinAnimation()
 //        buttonShake.shakeAnimation()
     }

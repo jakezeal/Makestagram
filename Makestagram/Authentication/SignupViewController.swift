@@ -14,6 +14,7 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
     // MARK: - Properties
     var usernameShake: CustomAnimation!
     var passwordShake: CustomAnimation!
+    var emailShake: CustomAnimation!
     
     // MARK: - IBOutlets
     @IBOutlet weak var signUpButton: UIButton!
@@ -28,6 +29,7 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         prepareUsernameShake()
         preparePasswordShake()
+        prepareEmailShake()
     }
     
     // MARK: - Preparations
@@ -43,6 +45,10 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
         passwordShake = CustomAnimation(view: passwordTextField, delay: 0, direction: .Left, repetitions: 4, maxRotation: 0, maxPosition: 10, duration: 0.1)
     }
     
+    func prepareEmailShake() {
+        emailShake = CustomAnimation(view: emailTextField, delay: 0, direction: .Left, repetitions: 4, maxRotation: 0, maxPosition: 10, duration: 0.1)
+    }
+    
     // MARK: - IBActions
     @IBAction func cancelButtonPressed(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true)
@@ -56,7 +62,7 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
         
         // if textfields aren't empty and have more than 6 characters
         
-        if username.characters.count > 6 && password.characters.count > 6 && email.containsString("@") {
+        if username.characters.count > 3 && password.characters.count > 3 && email.containsString("@") {
             let user = PFUser()
             user.username = username
             user.password = password
@@ -71,6 +77,7 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
         } else {
             usernameShake.shakeAnimation()
             passwordShake.shakeAnimation()
+            emailShake.shakeAnimation()
         }
     }
 }

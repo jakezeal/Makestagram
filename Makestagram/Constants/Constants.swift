@@ -9,12 +9,6 @@
 import Foundation
 import ConvenienceKit
 
-// MARK: - Enums
-enum Direction: Int {
-    case Left
-    case Right
-}
-
 // MARK: - Parse Helper Constants
 struct ParseHelperConstants {
     // Following Relation
